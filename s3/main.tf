@@ -1,10 +1,11 @@
 resource "random_string" "suffix" {
-    length = 16
-    special = false
+  length  = 16
+  special = false
+  upper   = false
 }
 
 resource "aws_s3_bucket" "terraform_state" {
-  bucket = "learn-terraform-migrate-${random_string.suffix.id}"
+  bucket        = "learn-terraform-migrate-${random_string.suffix.id}"
   force_destroy = true
 }
 
