@@ -7,10 +7,7 @@ terraform {
   }
 
   backend "s3" {
-    bucket         = "learn-terraform-migrate-ee83uysoydtyn0io"
     key            = "learn-terraform-migrate/example/frontend/terraform.tfstate"
-    dynamodb_table = "learn-terraform-migrate-ee83uysoydtyn0io"
-    region         = "us-east-2"
   }
 }
 

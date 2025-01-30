@@ -7,10 +7,7 @@ terraform {
   }
 
   backend "s3" {
-    bucket         = var.bucket_name
     key            = "learn-terraform-migrate/example/backend/terraform.tfstate"
-    dynamodb_table = var.dynamodb_table
-    region         = var.region
   }
 }
 
