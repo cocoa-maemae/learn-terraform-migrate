@@ -7,11 +7,11 @@ terraform {
   }
 
   backend "s3" {
-    key            = "learn-terraform-migrate/example/backend/terraform.tfstate"
+    key = "learn-terraform-migrate/example/storage/terraform.tfstate"
   }
 }
 
 resource "random_string" "this" {
-  count  = 3
-  length = 32
+  count  = var.string_count
+  length = var.string_length
 }
