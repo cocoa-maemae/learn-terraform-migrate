@@ -7,6 +7,7 @@ terraform {
   }
 
   backend "s3" {
+    bucket = "learn-terraform-migrate"
     key = "learn-terraform-migrate/compute/frontend/terraform.tfstate"
   }
 }
